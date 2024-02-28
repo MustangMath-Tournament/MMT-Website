@@ -7,6 +7,7 @@
     import Testimonial from "$lib/components/Testimonial.svelte";
     import Competition from '$lib/components/Competition.svelte';
     import FlexBox from '$lib/components/FlexBox.svelte';
+    import Sidebar from '$lib/components/Sidebar.svelte';
     import Table from "$lib/components/Table.svelte";
     import PanelBox from "$lib/components/PanelBox.svelte";
     import Image from '$lib/components/Image.svelte';
@@ -90,170 +91,184 @@
 
 <br />
 <br/>
-<Heading text="What is MMT?" size={2.5} textColor="#1B9AAA" />
-<div style="margin-left: 10vw; margin-right: 10vw;">
-    <CardPanelBox initials="MM">
-        <div style="padding: 20px;">
-            <p style="font-size: 1.5em; text-align: center;">The Mustang Math Tournament is a middle school math competition run for students around the nation.
-                It is put together by Mustang Math, a 501(c)(3) nonprofit organization made up of high school and college students!<br /><br />
-                The tournament is <strong>centered around teamwork and collaboration</strong>, incentivizing students to work with their teams not only to navigate the <strong>challenging but interesting problems</strong> of the tournament, 
-                but also to develop strategies to master the unique and fun game-like rounds. With interesting and fun rounds including a logic-based puzzle round, a strategy-filled bingo round, a race-like gallop round, 
-                and our trademark 'Mystery Mare' round, our tournament is guaranteed to be <strong>enjoyable for any and all students who have an interest in mathematics</strong>.<br /><br />
-                Don't believe us? Check out some comments from past participants below!
-            </p>
-        </div>
-    </CardPanelBox>
-</div>
+<section id="What is MMT">
+    <Heading text="What is MMT?" size={2.5} textColor="#1B9AAA" />
+    <div style="margin-left: 10vw; margin-right: 10vw;">
+        <CardPanelBox initials="MM">
+            <div style="padding: 20px;">
+                <p style="font-size: 1.5em; text-align: center;">The Mustang Math Tournament is a middle school math competition run for students around the nation.
+                    It is put together by Mustang Math, a 501(c)(3) nonprofit organization made up of high school and college students!<br /><br />
+                    The tournament is <strong>centered around teamwork and collaboration</strong>, incentivizing students to work with their teams not only to navigate the <strong>challenging but interesting problems</strong> of the tournament, 
+                    but also to develop strategies to master the unique and fun game-like rounds. With interesting and fun rounds including a logic-based puzzle round, a strategy-filled bingo round, a race-like gallop round, 
+                    and our trademark 'Mystery Mare' round, our tournament is guaranteed to be <strong>enjoyable for any and all students who have an interest in mathematics</strong>.<br /><br />
+                    Don't believe us? Check out some comments from past participants below!
+                </p>
+            </div>
+        </CardPanelBox>
+    </div>
+</section>
 <br>
-<Heading text="Competitions" size={2.5} textColor="#1B9AAA" />
-<div style="margin-top:1%;"></div>
-<div class="competition-wrapper">
-        <p style="font-size: 2em; text-align: center;">Select your location to see more information!</p>
-        <FlexBox align="start">
-            
-            <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("CA")}}><SVGComponent clicked={loc == "CA" ? true : false} svgURL="/competitions/states/CaliforniaOutlineCursive.svg" hoverFill="red"/></button>
-            <!-- <button style="background:transparent; border-color:transparent;" on:click={handleClickCO}><SVGComponent svgURL="/competitions/states/ColoradoOutlineCursive.svg" hoverFill="orange"/></button> -->
-            <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("GA")}}><SVGComponent clicked={loc == "GA" ? true : false} svgURL="/competitions/states/GeorgiaOutlineCursive.svg" hoverFill="orange"/></button>
-            <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("IL")}}><SVGComponent clicked={loc == "IL" ? true : false} svgURL="/competitions/states/IllinoisOutlineCursive.svg" hoverFill="green"/></button>
-            <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("MA")}}><SVGComponent clicked={loc == "MA" ? true : false} svgURL="/competitions/states/MassachusettsOutlineCursive.svg" hoverFill="blue"/></button>
-            <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("WA")}}><SVGComponent clicked={loc == "WA" ? true : false} svgURL="/competitions/states/WashingtonOutlineCursive.svg" hoverFill="hotpink"/></button>
-            <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("O")}}><SVGComponent clicked={loc == "O" ? true : false} svgURL="/competitions//states/UnitedStatesOutline.svg" hoverFill="purple"/></button>
-        </FlexBox>
-</div> 
+<section id="Competitions">
+    <Heading text="Competitions" size={2.5} textColor="#1B9AAA" />
+    <div style="margin-top:1%;"></div>
+    <div class="competition-wrapper">
+            <p style="font-size: 2em; text-align: center;">Select your location to see more information!</p>
+            <FlexBox align="start">
+                
+                <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("CA")}}><SVGComponent clicked={loc == "CA" ? true : false} svgURL="/competitions/states/CaliforniaOutlineCursive.svg" hoverFill="red"/></button>
+                <!-- <button style="background:transparent; border-color:transparent;" on:click={handleClickCO}><SVGComponent svgURL="/competitions/states/ColoradoOutlineCursive.svg" hoverFill="orange"/></button> -->
+                <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("GA")}}><SVGComponent clicked={loc == "GA" ? true : false} svgURL="/competitions/states/GeorgiaOutlineCursive.svg" hoverFill="orange"/></button>
+                <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("IL")}}><SVGComponent clicked={loc == "IL" ? true : false} svgURL="/competitions/states/IllinoisOutlineCursive.svg" hoverFill="green"/></button>
+                <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("MA")}}><SVGComponent clicked={loc == "MA" ? true : false} svgURL="/competitions/states/MassachusettsOutlineCursive.svg" hoverFill="blue"/></button>
+                <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("WA")}}><SVGComponent clicked={loc == "WA" ? true : false} svgURL="/competitions/states/WashingtonOutlineCursive.svg" hoverFill="hotpink"/></button>
+                <button style="background:transparent; border-color:transparent;" on:click={() => {handleClick("O")}}><SVGComponent clicked={loc == "O" ? true : false} svgURL="/competitions//states/UnitedStatesOutline.svg" hoverFill="purple"/></button>
+            </FlexBox>
+    </div> 
+</section>
 
 <br id="registrationInfo" bind:this={infoElem}/>
 {#if data}
-    <Heading text={"MMT " + data["State"] + " Overview"} size={2.5} textColor="#1B9AAA" />
-    <div style="margin-left: 10vw; margin-right: 10vw;">
-        <CardPanelBox initials="MM">
-            <div style="padding: 10px; padding-left: 30px; padding-top: 25px;">
-            <p>
-                <strong>DATE:</strong> {data["Date"]} <br />
-                <strong>TEAM SIZE:</strong> {data["TeamSize"]} <br />
-                <strong>LOCATION:</strong> {data["Location"]}<br />
-                <strong>EARLY HORSE COST:</strong> ${data["EarlyHorseCost"]} per participant (Register before <strong>{data["EarlyHorseCostDate"]}</strong>)<br />
-                <strong>NORMAL COST:</strong> ${data["NormalCost"]} per participant (Register before <strong>{data["NormalCostDate"]}</strong>)<br /> 
-                <strong>LATE COST:</strong> ${data["LateCost"]}  per participant (Register before <strong>{data["LateCostDate"]}</strong>)<br /> <br />
-                <a href="https://tinyurl.com/MMT2024Registration" target="_blank"><strong>CLICK HERE FOR REGISTRATION INSTRUCTIONS</strong></a>
-                <br /><br />
-                <i><strong>*:</strong> Incomplete teams of 1-2 may be merged with other teams to make a full team of 3-4</i><br />
-                <i><strong>Note for International Students:</strong> Students not in Canada or the United States should participate in the international version of our tournament being run by SIMCC. Email us at <a href="mailto:tournament@mustangmath.com">tournament@mustangmath.com</a> if you're interested.</i><br /><br />
-                <i><strong>Note for Students in the US:</strong> Students living within 50 miles of our in-person sites <strong>must</strong> participate in person. If you have an extenuating circumstance that would prevent this please send an email to <a href="mailto:tournament@mustangmath.com">tournament@mustangmath.com</a>, and we may grant you permission to participate online.</i>
-            </p>
-            </div>
-        </CardPanelBox>
-    </div> <br />
+    <section id={data["State"] +" Overview"}>
+        <Heading text={"MMT " + data["State"] + " Overview"} size={2.5} textColor="#1B9AAA" />
+        <div style="margin-left: 10vw; margin-right: 10vw;">
+            <CardPanelBox initials="MM">
+                <div style="padding: 10px; padding-left: 30px; padding-top: 25px;">
+                <p>
+                    <strong>DATE:</strong> {data["Date"]} <br />
+                    <strong>TEAM SIZE:</strong> {data["TeamSize"]} <br />
+                    <strong>LOCATION:</strong> {data["Location"]}<br />
+                    <strong>EARLY HORSE COST:</strong> ${data["EarlyHorseCost"]} per participant (Register before <strong>{data["EarlyHorseCostDate"]}</strong>)<br />
+                    <strong>NORMAL COST:</strong> ${data["NormalCost"]} per participant (Register before <strong>{data["NormalCostDate"]}</strong>)<br /> 
+                    <strong>LATE COST:</strong> ${data["LateCost"]}  per participant (Register before <strong>{data["LateCostDate"]}</strong>)<br /> <br />
+                    <a href="https://tinyurl.com/MMT2024Registration" target="_blank"><strong>CLICK HERE FOR REGISTRATION INSTRUCTIONS</strong></a>
+                    <br /><br />
+                    <i><strong>*:</strong> Incomplete teams of 1-2 may be merged with other teams to make a full team of 3-4</i><br />
+                    <i><strong>Note for International Students:</strong> Students not in Canada or the United States should participate in the international version of our tournament being run by SIMCC. Email us at <a href="mailto:tournament@mustangmath.com">tournament@mustangmath.com</a> if you're interested.</i><br /><br />
+                    <i><strong>Note for Students in the US:</strong> Students living within 50 miles of our in-person sites <strong>must</strong> participate in person. If you have an extenuating circumstance that would prevent this please send an email to <a href="mailto:tournament@mustangmath.com">tournament@mustangmath.com</a>, and we may grant you permission to participate online.</i>
+                </p>
+                </div>
+            </CardPanelBox>
+        </div> 
+    </section>
+    <br />
 
-<Heading text="Schedule" size={2.5} textColor="#1B9AAA" />
-<div class="schedule-wrapper">
-    <FlexBox>
-        <PanelBox>
-            <Table data={data["scheduleData"]} width="auto" headerColor="#1B9AAA" rowColors={["#A4D6AF", "#ADCDD6"]} cellPadding={5} cellPaddingRight={20} tableStyle="margin-left: auto; margin-right: auto"/>
-            <p style="margin-top: 2px; margin-bottom: 0px;">*Schedule subject to change. Note that there is built-in buffer time to explain instructions and assist with technical difficulties.*</p>
-        </PanelBox>
-    </FlexBox>
-</div> <br />
+    <section id="Schedule">
+        <Heading text="Schedule" size={2.5} textColor="#1B9AAA" />
+        <div class="schedule-wrapper">
+            <FlexBox>
+                <PanelBox>
+                    <Table data={data["scheduleData"]} width="auto" headerColor="#1B9AAA" rowColors={["#A4D6AF", "#ADCDD6"]} cellPadding={5} cellPaddingRight={20} tableStyle="margin-left: auto; margin-right: auto"/>
+                    <p style="margin-top: 2px; margin-bottom: 0px;">*Schedule subject to change. Note that there is built-in buffer time to explain instructions and assist with technical difficulties.*</p>
+                </PanelBox>
+            </FlexBox>
+        </div> <br />
+    </section>
+    <section id="Awards">
+        <Heading text="Awards" size={2.5} textColor="#1B9AAA" />
+        <div style="margin-left: 10vw; margin-right: 10vw;">
+            <CardPanelBox initials="MM">
+                <div style="padding: 20px;">
+                    <p style="font-size: 1.5em; text-align: center;">Medals will be given to (at minimum) the members of the top 3 teams of each division, along with certificates of participation to all students and certificates of achievement to high-scoring teams. A wide variety of other prizes are available for top scoring teams, winners of activities, and a raffle including prizes from Wolfram, AoPS, and more!</p>
+                </div>
+            </CardPanelBox>
+        </div> 
+    </section>
+    <br />
 
-<Heading text="Awards" size={2.5} textColor="#1B9AAA" />
-<div style="margin-left: 10vw; margin-right: 10vw;">
-    <CardPanelBox initials="MM">
-        <div style="padding: 20px;">
-            <p style="font-size: 1.5em; text-align: center;">Medals will be given to (at minimum) the members of the top 3 teams of each division, along with certificates of participation to all students and certificates of achievement to high-scoring teams. A wide variety of other prizes are available for top scoring teams, winners of activities, and a raffle including prizes from Wolfram, AoPS, and more!</p>
-        </div>
-    </CardPanelBox>
-</div> <br />
-
-<Heading text="Rules" size={2.5} textColor="#1B9AAA" />
-<br />
-<div class="cards">
-    <FlipCard mainText="General Rules" id="showDropdown">
-        <ol>
-            <li>No cheating - This contest has a zero-tolerance cheating policy. Any evidence of cheating may lead to immediate disqualification, or any other punishment deemed appropriate by competition staff.</li>
-            <li>No calculators, rulers, compasses, protractors, or other aids are permitted.</li>
-            <li>You may not use the Internet as a resource at any point during a test.</li>
-                <ol type="a">
-                    <li>In order to help enforce this, we may require individuals to provide a solution for a problem during the competition - so keep track of your work!</li>
+    <section id="Rules">
+        <Heading text="Rules" size={2.5} textColor="#1B9AAA" />
+        <br />
+        <div class="cards">
+            <FlipCard mainText="General Rules" id="showDropdown">
+                <ol>
+                    <li>No cheating - This contest has a zero-tolerance cheating policy. Any evidence of cheating may lead to immediate disqualification, or any other punishment deemed appropriate by competition staff.</li>
+                    <li>No calculators, rulers, compasses, protractors, or other aids are permitted.</li>
+                    <li>You may not use the Internet as a resource at any point during a test.</li>
+                        <ol type="a">
+                            <li>In order to help enforce this, we may require individuals to provide a solution for a problem during the competition - so keep track of your work!</li>
+                        </ol>
+                    <li>The team divisions are determined by the highest grade level amongst the team members. Teams with 1 or more 8th graders will be in the <strong>Stallion</strong> division, teams with 7th graders and below will be in the <strong>Colt</strong> division, and teams with 6th graders and below will be in the <strong>Foal</strong> division. Teams may <em>choose</em> to compete in a higher division, if they&rsquo;d like.</li>
                 </ol>
-            <li>The team divisions are determined by the highest grade level amongst the team members. Teams with 1 or more 8th graders will be in the <strong>Stallion</strong> division, teams with 7th graders and below will be in the <strong>Colt</strong> division, and teams with 6th graders and below will be in the <strong>Foal</strong> division. Teams may <em>choose</em> to compete in a higher division, if they&rsquo;d like.</li>
-        </ol>
-    </FlipCard>
+            </FlipCard>
+            <br />
+            <FlipCard mainText="Answer Formatting Rules" id="showDropdown">
+                <ol>
+                    <li>Carry out any reasonable calculations. For instance, you should evaluate any expressions which will take negligible time to evaluate (such as 1/2+1/3). You don't have to carry out unreasonable calculations, including large powers (e.g. 7<sup>8</sup>), large factorials, large products, and trigonometric functions which cannot be expressed in terms of radicals.</li>
+                    <li>Write rational numbers in lowest terms. Decimals are also acceptable, provided they are exact.</li>
+                    <li>Move all square factors outside radicals. For example, write 3√7 instead of √63.</li>
+                    <li>Denominators need to be rationalized. For example, write 1/√2 as √2/2 instead.</li>
+                    <li>Do not express an answer using a repeated sum or product.</li>
+                    <li>Here are some examples of simplified answers, and examples of unsimplified answers with simplified equivalents://asdas
+                        <div style="margin-top: 5px"><Image url="/competitions/mmt-2022/acceptable-answers.png" alt="Acceptable answer examples" /></div>
+                        <div style="margin-top: 5px"><Image url="/competitions/mmt-2022/unacceptable-answers.png" alt="Unacceptable answer examples" /></div>
+                    </li>
+                </ol>
+            </FlipCard>
+            <br />
+            <FlipCard mainText="Potential Topics Covered" id="showDropdown">
+                <p id="disclaimer">Disclaimer: While most problems should fall within the scope of these topics, there may be a few that are not.</p>
+                {#if windowWidth > 1000}
+                <Table data={topicsCovered} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/1200}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/1500}em;" />
+                {:else if windowWidth > 800}
+                <Table data={topicsSmall1} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/800}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/800}em;" />
+                <Table data={topicsSmall2} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/800}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/800}em;" />
+                {:else}
+                <Table data={topicsAlgebra} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/500}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/500}em;" />
+                <Table data={topicsCombo} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/500}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/500}em;" />
+                <Table data={topicsGeo} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/500}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/500}em;" />
+                <Table data={topicsNT} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/500}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/500}em;" />
+                {/if}
+            </FlipCard>
+            <br />
+            <FlipCard mainText="ROUND 1: Mounting Mayhem (Puzzle)" id="showDropdown">
+                <ol>
+                    <li>The Mounting Mayhem Round will consist of a series of progressively harder logic puzzles. Students will have 15 minutes to learn the rules and basic strategy of the puzzles, then 60 minutes to solve as many of them as possible.</li>
+                    <li>Puzzles often require out-of-the-box thinking although all topics can readily be understood and grasped by middle schoolers.</li>
+                    <li>Harder puzzles will be worth more points, but these puzzles will be longer and/or require more creativity — you must decide what problems to focus your time on to optimize your team score.</li>
+                </ol>
+            </FlipCard>
+            <br />
+            <FlipCard mainText="ROUND 2: Herding Hexes" id="showDropdown">
+                <ol>
+                    <li>The “Herding Hexes” Round will consist of 26 questions to be solved in 45 minutes.</li>
+                    <li>The questions will be laid out on a grid of connected hexagons, with more difficult problems being located furthest from the center.</li>
+                    <li>Your score in the round will be determined by the problems you get correct, with bonus points available for having more correct answers connected within the grid!</li>
+                    <li>You are not necessarily expected to solve all the questions in this round within the allotted time. Instead, we encourage you to strategize how you might use your time to maximize your points!</li>
+                </ol>
+            </FlipCard>
+            <br />
+            <FlipCard mainText="ROUND 3: Mystery Mare" id="showDropdown">
+                <ol>
+                    <li>The Mystery Mare round is exactly that — a mystery! The rules of the round will be revealed on competition day.</li>
+                    <li>Hints about the nature of the round may be revealed as the competition date nears.</li>
+                </ol>
+            </FlipCard>
+            <br />
+            <FlipCard mainText="ROUND 4: Gallop" id="showDropdown">
+                <ol>
+                    <li>The Gallop Round will consist of 27 questions to be solved in 60 minutes.</li>
+                    <li>The questions will be divided into 9 sets of 3 questions each, and you <strong>must submit the answers to one set</strong> before accessing the problems for the next. This means you must strategize when to submit each set (incomplete or not) to ensure you get access to as many questions as possible.</li>
+                    <li>The problems will get progressively more difficult, and later problems will be worth more points.</li>
+                    <li>Submissions will be scored immediately and a live score of all participating teams will be available during the competition. Prepare for the adrenaline rush!</li>
+                </ol>
+            </FlipCard>
+        </div>
+    </section>
+    <!--
+    <Dropdown mainText="FAQ" id="showDropdown">
+        <p>
+            <strong>Q:</strong> I'm a parent or a student, not a coach - how can I register? <br />
+            <strong>A:</strong> MMT doesn't require you to be a coach! A parent can act as a coach (and register as a coach on ContestDojo) to create an organization and team(s) for their participating students. <strong>Students should not create coach accounts.</strong>
+        </p>
+        <p>
+            <strong>Q:</strong> Where can I find practice material for the tests? How can we prepare? <br />
+            <strong>A:</strong> You can take a look at our <a target="_blank" sveltekit:prefetch href="/resources">past tests</a>, and we also highly recommend looking at <a target="_blank" sveltekit:prefetch href="https://www.mathcounts.org/resources/past-competitions">past MathCounts</a>, <a target="_blank" sveltekit:prefetch href="https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions">AMC 8/10</a>, and <a target="_blank" sveltekit:prefetch href="https://www.ocf.berkeley.edu/~bmt/archive/">BmMT</a> tests as these are similar in level to the problems at MMT.
+        </p>
+    </Dropdown>
+    -->
     <br />
-    <FlipCard mainText="Answer Formatting Rules" id="showDropdown">
-        <ol>
-            <li>Carry out any reasonable calculations. For instance, you should evaluate any expressions which will take negligible time to evaluate (such as 1/2+1/3). You don't have to carry out unreasonable calculations, including large powers (e.g. 7<sup>8</sup>), large factorials, large products, and trigonometric functions which cannot be expressed in terms of radicals.</li>
-            <li>Write rational numbers in lowest terms. Decimals are also acceptable, provided they are exact.</li>
-            <li>Move all square factors outside radicals. For example, write 3√7 instead of √63.</li>
-            <li>Denominators need to be rationalized. For example, write 1/√2 as √2/2 instead.</li>
-            <li>Do not express an answer using a repeated sum or product.</li>
-            <li>Here are some examples of simplified answers, and examples of unsimplified answers with simplified equivalents://asdas
-                <div style="margin-top: 5px"><Image url="/competitions/mmt-2022/acceptable-answers.png" alt="Acceptable answer examples" /></div>
-                <div style="margin-top: 5px"><Image url="/competitions/mmt-2022/unacceptable-answers.png" alt="Unacceptable answer examples" /></div>
-            </li>
-        </ol>
-    </FlipCard>
-    <br />
-    <FlipCard mainText="Potential Topics Covered" id="showDropdown">
-        <p id="disclaimer">Disclaimer: While most problems should fall within the scope of these topics, there may be a few that are not.</p>
-        {#if windowWidth > 1000}
-        <Table data={topicsCovered} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/1200}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/1500}em;" />
-        {:else if windowWidth > 800}
-        <Table data={topicsSmall1} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/800}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/800}em;" />
-        <Table data={topicsSmall2} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/800}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/800}em;" />
-        {:else}
-        <Table data={topicsAlgebra} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/500}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/500}em;" />
-        <Table data={topicsCombo} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/500}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/500}em;" />
-        <Table data={topicsGeo} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/500}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/500}em;" />
-        <Table data={topicsNT} width="100%" headerColor="#1B9AAA" rowColors={["#A4D6AF"]} cellPadding={5} cellPaddingRight={20} textSize={1} cellStyle="vertical-align: top; font-size: {windowWidth/500}em;" tableStyle="table-layout: fixed; padding: 10px;" headerStyle="font-size: {windowWidth/500}em;" />
-        {/if}
-    </FlipCard>
-    <br />
-    <FlipCard mainText="ROUND 1: Mounting Mayhem (Puzzle)" id="showDropdown">
-        <ol>
-            <li>The Mounting Mayhem Round will consist of a series of progressively harder logic puzzles. Students will have 15 minutes to learn the rules and basic strategy of the puzzles, then 60 minutes to solve as many of them as possible.</li>
-            <li>Puzzles often require out-of-the-box thinking although all topics can readily be understood and grasped by middle schoolers.</li>
-            <li>Harder puzzles will be worth more points, but these puzzles will be longer and/or require more creativity — you must decide what problems to focus your time on to optimize your team score.</li>
-        </ol>
-    </FlipCard>
-    <br />
-    <FlipCard mainText="ROUND 2: Herding Hexes" id="showDropdown">
-        <ol>
-            <li>The “Herding Hexes” Round will consist of 26 questions to be solved in 45 minutes.</li>
-            <li>The questions will be laid out on a grid of connected hexagons, with more difficult problems being located furthest from the center.</li>
-            <li>Your score in the round will be determined by the problems you get correct, with bonus points available for having more correct answers connected within the grid!</li>
-            <li>You are not necessarily expected to solve all the questions in this round within the allotted time. Instead, we encourage you to strategize how you might use your time to maximize your points!</li>
-        </ol>
-    </FlipCard>
-    <br />
-    <FlipCard mainText="ROUND 3: Mystery Mare" id="showDropdown">
-        <ol>
-            <li>The Mystery Mare round is exactly that — a mystery! The rules of the round will be revealed on competition day.</li>
-            <li>Hints about the nature of the round may be revealed as the competition date nears.</li>
-        </ol>
-    </FlipCard>
-    <br />
-    <FlipCard mainText="ROUND 4: Gallop" id="showDropdown">
-        <ol>
-            <li>The Gallop Round will consist of 27 questions to be solved in 60 minutes.</li>
-            <li>The questions will be divided into 9 sets of 3 questions each, and you <strong>must submit the answers to one set</strong> before accessing the problems for the next. This means you must strategize when to submit each set (incomplete or not) to ensure you get access to as many questions as possible.</li>
-            <li>The problems will get progressively more difficult, and later problems will be worth more points.</li>
-            <li>Submissions will be scored immediately and a live score of all participating teams will be available during the competition. Prepare for the adrenaline rush!</li>
-        </ol>
-    </FlipCard>
-</div>
-<!--
-<Dropdown mainText="FAQ" id="showDropdown">
-    <p>
-        <strong>Q:</strong> I'm a parent or a student, not a coach - how can I register? <br />
-        <strong>A:</strong> MMT doesn't require you to be a coach! A parent can act as a coach (and register as a coach on ContestDojo) to create an organization and team(s) for their participating students. <strong>Students should not create coach accounts.</strong>
-    </p>
-    <p>
-        <strong>Q:</strong> Where can I find practice material for the tests? How can we prepare? <br />
-        <strong>A:</strong> You can take a look at our <a target="_blank" sveltekit:prefetch href="/resources">past tests</a>, and we also highly recommend looking at <a target="_blank" sveltekit:prefetch href="https://www.mathcounts.org/resources/past-competitions">past MathCounts</a>, <a target="_blank" sveltekit:prefetch href="https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions">AMC 8/10</a>, and <a target="_blank" sveltekit:prefetch href="https://www.ocf.berkeley.edu/~bmt/archive/">BmMT</a> tests as these are similar in level to the problems at MMT.
-    </p>
-</Dropdown>
--->
-<br />
 {/if}
+<section id="Testimonials">
 <Heading text="Testimonials" size={2.5} textColor="#1B9AAA" />
 <div class="grid-three" style="margin-left: 10vw; margin-right: 10vw;">
     <div>
@@ -271,11 +286,13 @@
         <Testimonial testimonial="I really appreciate all that MMT has done and I look forward to the competition that is held next year! I must say that the MMT was an impressive execution of math competitions unlike anything I've seen before!" title="2022 Participant" />
         <Testimonial testimonial="My favorite memory from MMT was the teamwork - both chaotically and organizedly working with each other to solve the problems" title="2022 Participant" />
     </div>
-</div> <br />
+</div> 
+</section>
+<br />
 
 <br /><br />
 
-
+<Sidebar />
 
 <style>
 
