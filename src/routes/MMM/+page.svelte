@@ -12,7 +12,7 @@
     let windowWidth;
 
     const scheduleData = [
-        {"Day": "09/19 to 09/26", "Start Time (PT)": "All Day", "Event": "Perilous Proofs"},
+        {"Day": "09/22 to 09/26", "Start Time (PT)": "All Day", "Event": "Perilous Proofs"},
         {"Day": "09/26", "Start Time (PT)": "9:00 AM", "Event": "Opening Ceremony <a href='https://us06web.zoom.us/j/88019410306?pwd=l36Mh72xy14BjjhCAJz7xGtXn56FzB.1' target='_blank' style='color:#1B9AAA;'>[Zoom Link]</a>"},
         {"Day": "09/26", "Start Time (PT)": "9:30 AM", "Event": "Solo Stampede <a href='https://bit.ly/MMMdiscord' target='_blank' style='color:#5865F2;'>[Discord]</a>"},
         {"Day": "09/26", "Start Time (PT)": "10:45 AM", "Event": "Lunch"},
